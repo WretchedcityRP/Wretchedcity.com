@@ -32,7 +32,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: none;
 }
-:root { color-scheme: light; forced-color-adjust: none; --wc-card-surface:rgba(91,184,245,0.07); --wc-card-border:rgba(91,184,245,0.14); }
+:root { color-scheme: light; forced-color-adjust: none; --wc-card-surface:rgba(91,184,245,0.10); --wc-card-border:rgba(91,184,245,0.14); }
 html { background: #080a0f; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body {
   background: #080a0f;
@@ -66,7 +66,7 @@ opacity: 0.34;
 pointer-events: none;
 z-index: 0;
 }
-body > nav, body > .hero, body > .stats-bar, body > .sw, body > .sw-dark, body > .store-bg, body > .discord-cta, body > footer {
+body > .hero, body > .stats-bar, body > .sw, body > .sw-dark, body > .store-bg, body > .discord-cta, body > footer {
 position: relative;
 z-index: 1;
 }
@@ -159,9 +159,9 @@ url('assets/wretched-city-background.png') center 48% / cover no-repeat; z-index
 .faction-kicker { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.68rem; letter-spacing:3px; text-transform:uppercase; color:#5bb8f5; margin-bottom:12px; display:block; }
 .faction-name { font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:clamp(1.7rem,3vw,2.2rem); letter-spacing:2px; color:#eef4fa; margin-bottom:8px; display:block; }
 .faction-desc { font-size:0.9rem; color:#738497; line-height:1.58; max-width:46ch; }
-.faction-meta { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; margin-top:14px; padding-top:12px; border-top:1px solid rgba(91,184,245,0.09); color:#66778a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:0.8px; text-transform:uppercase; }
+.faction-meta { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; margin-top:auto; padding-top:12px; border-top:1px solid rgba(91,184,245,0.09); color:#66778a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:0.8px; text-transform:uppercase; }
 .faction-meta strong { color:#eef4fa; font-weight:600; }
-.faction-action { display:inline-flex; align-items:center; gap:9px; margin-top:auto; padding-top:16px; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:2.3px; text-transform:uppercase; color:#5bb8f5; }
+.faction-action { display:inline-flex; align-items:center; gap:9px; margin-top:0; padding-top:16px; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:2.3px; text-transform:uppercase; color:#5bb8f5; }
 .faction-action::after { content:'→'; font-size:1rem; line-height:1; transition:transform 0.2s ease; }
 .faction-card:hover .faction-action::after { transform:translateX(4px); }
 .faction-card:focus-visible { outline:2px solid #5bb8f5; outline-offset:4px; }
@@ -408,28 +408,28 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
         <span class="faction-kicker">Business Operations</span>
         <span class="faction-name">Wretched City Business Management</span>
         <p class="faction-desc">The management hub for city businesses, ownership coordination, approvals, and business support.</p>
-        <div class="faction-meta" aria-label="Business Management server details"><span><strong>2</strong> Online</span><span><strong>3</strong> Members</span></div>
+        <div class="faction-meta" aria-label="Business Management details"><span><strong>Business</strong> Management</span><span><strong>Public</strong> Applications</span></div>
         <span class="faction-action">Go to Server</span>
       </a>
       <a class="faction-card" href="https://discord.gg/fnUmGQbvXJ" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City Gang Management Discord">
         <span class="faction-kicker">Gang Operations</span>
         <span class="faction-name">Wretched City Gang Management</span>
         <p class="faction-desc">The management hub for gang leadership, organization coordination, approvals, and gang support.</p>
-        <div class="faction-meta" aria-label="Gang Management server details"><span><strong>2</strong> Online</span><span><strong>4</strong> Members</span></div>
+        <div class="faction-meta" aria-label="Gang Management details"><span><strong>Gang</strong> Management</span><span><strong>Public</strong> Applications</span></div>
         <span class="faction-action">Go to Server</span>
       </a>
       <a class="faction-card" href="https://discord.gg/GwN62DBsxu" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City LSPD Discord">
         <span class="faction-kicker">Law Enforcement</span>
         <span class="faction-name">Wretched City LSPD</span>
         <p class="faction-desc">The official LSPD department hub for applications, onboarding, operations, and department coordination.</p>
-        <div class="faction-meta" aria-label="LSPD server details"><span><strong>LSPD</strong> Department</span><span><strong>Public</strong> Intake</span></div>
+        <div class="faction-meta" aria-label="LSPD details"><span><strong>LSPD</strong> Department</span><span><strong>Public</strong> Applications</span></div>
         <span class="faction-action">Go to Server</span>
       </a>
       <a class="faction-card" href="https://discord.gg/pdE6BNhV7v" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City EMS Discord">
         <span class="faction-kicker">Emergency Services</span>
         <span class="faction-name">Wretched City EMS</span>
         <p class="faction-desc">The official EMS department hub for applications, onboarding, medical operations, and department coordination.</p>
-        <div class="faction-meta" aria-label="EMS server details"><span><strong>EMS</strong> Department</span><span><strong>Public</strong> Intake</span></div>
+        <div class="faction-meta" aria-label="EMS details"><span><strong>EMS</strong> Department</span><span><strong>Public</strong> Applications</span></div>
         <span class="faction-action">Go to Server</span>
       </a>
     </div>

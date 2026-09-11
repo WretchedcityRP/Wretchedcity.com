@@ -257,22 +257,30 @@ html.js-on .reveal { opacity:1; transform:none; }
 .mobile-menu a:hover{color:#5bb8f5;background:rgba(91,184,245,.05)}
 @media (max-width:850px){.feature-grid{grid-template-columns:1fr}}
 @media (max-width:850px) {
-nav { padding:13px 14px; }
+nav { padding:10px 14px; }
 .nav-links { display:none; }
 .mobile-menu-btn{display:flex}
-.nav-logo { font-size:1.05rem; letter-spacing:1.5px; gap:7px; }
-.nav-logo img { width:36px; height:36px; }
+.nav-logo { font-size:1rem; letter-spacing:1.5px; gap:7px; }
+.nav-logo img { width:32px; height:32px; }
 .nav-right { display:none; }
 .nav-socials { gap:4px; }
 .nav-social { width:30px; height:30px; }
 .nav-social svg { width:18px; height:18px; }
 .nav-btn { display:none; }
 .nav-discord-m { display:flex; }
-.hero-title { font-size:clamp(3.8rem,17vw,5.5rem); }
-.hero-logo { width:180px; margin-bottom:8px; }
-.hero-btns { flex-direction:column; align-items:center; gap:12px; }
-.btn-blue,.btn-ghost { width:260px; text-align:center; clip-path:none; }
-.stats-bar { gap:28px; padding:28px 20px; }
+.hero { height:auto; min-height:620px; }
+.hero-bg { inset:0; transform:none; background-position:center 46%; }
+.hero-content { padding:54px 18px 38px; }
+.hero-title { font-size:clamp(3.45rem,15.5vw,4.8rem); letter-spacing:3px; }
+.hero-logo { width:158px; margin-bottom:8px; }
+.hero-sub { max-width:330px; margin-left:auto; margin-right:auto; line-height:1.55; }
+.hero-btns { flex-direction:column; align-items:center; gap:10px; margin-top:30px; }
+.btn-blue,.btn-ghost { width:250px; text-align:center; clip-path:none; }
+.stats-bar { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px 8px; padding:28px 12px; }
+.stat { min-width:0; }
+.stat-num { font-size:2.35rem; }
+#stat-status { font-size:1.9rem; }
+.stat-label { font-size:0.57rem; letter-spacing:1.7px; line-height:1.25; margin-top:7px; }
 .sw { padding:64px 20px; }
 .sw-dark .inner { padding:64px 20px; }
 .steps-grid { grid-template-columns:1fr; gap:14px; }

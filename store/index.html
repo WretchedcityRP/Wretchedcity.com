@@ -235,10 +235,8 @@ html.js-on .reveal { opacity:1; transform:none; }
 
 
 .mobile-menu-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:0;background:transparent;color:#eef4fa;font-size:1.55rem;line-height:1;cursor:pointer;padding:0;margin-left:auto}
-.mobile-menu{display:none;position:absolute;top:100%;right:14px;left:auto;width:min(220px,calc(100vw - 28px));background:linear-gradient(180deg,rgba(8,10,15,.98),rgba(8,10,15,.94));padding:7px 0;z-index:120;box-shadow:0 18px 42px rgba(0,0,0,.34);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.mobile-menu.open{display:flex;flex-direction:column}
-.mobile-menu a{padding:11px 16px;text-align:left;border:0;color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase}
-.mobile-menu a:hover{color:#5bb8f5;background:rgba(91,184,245,.05)}
+.mobile-menu{display:flex;flex-direction:column;position:absolute;top:calc(100% + 8px);right:12px;left:auto;width:min(244px,calc(100vw - 24px));padding:8px;gap:2px;z-index:120;background:rgba(15,19,27,.82);border:1px solid rgba(255,255,255,.10);border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.42),0 2px 12px rgba(0,0,0,.18);backdrop-filter:blur(22px) saturate(145%);-webkit-backdrop-filter:blur(22px) saturate(145%);visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-8px) scale(.965);transform-origin:top right;transition:opacity .18s ease,transform .18s cubic-bezier(.22,.8,.32,1),visibility 0s linear .18s}.mobile-menu.open{visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);transition-delay:0s}.mobile-menu a{padding:12px 14px;text-align:left;border:0;border-radius:13px;color:#eef4fa;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.80rem;letter-spacing:1.35px;text-transform:uppercase;transition:background .15s ease,color .15s ease,transform .15s ease}.mobile-menu a:hover,.mobile-menu a:focus-visible{color:#fff;background:rgba(255,255,255,.09);outline:none}.mobile-menu a:active{background:rgba(91,184,245,.16);transform:scale(.985)}
+@media (prefers-reduced-motion:reduce){.mobile-menu,.mobile-menu a{transition:none}}
 @media (max-width:850px) {
 nav { padding:10px 14px; }
 .nav-links { display:none; }

@@ -4,24 +4,13 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="theme-color" content="#080a0f"/>
-<meta name="description" content="Wretched City RP is a premium FiveM roleplay community built around player-driven stories, businesses, organizations, and custom city experiences."/>
-<link rel="canonical" href="https://wretchedcity.com/"/>
+<meta name="description" content="Official Wretched City RP store for server perks, custom orders, and VIP additions."/>
+<link rel="canonical" href="https://wretchedcity.com/store/"/>
+<base href="../"/>
 <link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="apple-touch-icon" href="favicon.png"/>
-
-<meta property="og:type" content="website"/>
-<meta property="og:site_name" content="Wretched City RP"/>
-<meta property="og:title" content="Wretched City RP — FiveM Roleplay Server"/>
-<meta property="og:description" content="Where every street has a story. Every choice has a consequence. Join the city."/>
-<meta property="og:image" content="https://wretchedcity.com/og-image.png"/>
-<meta property="og:url" content="https://wretchedcity.com/"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Wretched City RP — FiveM Roleplay Server"/>
-<meta name="twitter:description" content="Where every street has a story. Every choice has a consequence. Join the city."/>
-<meta name="twitter:image" content="https://wretchedcity.com/og-image.png"/>
-<title>Wretched City RP</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<meta property="og:type" content="website"/><meta property="og:site_name" content="Wretched City RP"/><meta property="og:title" content="Store — Wretched City RP"/><meta property="og:description" content="Browse Wretched City RP perks, custom orders, and VIP additions."/><meta property="og:image" content="https://wretchedcity.com/og-image.png"/><meta property="og:url" content="https://wretchedcity.com/store/"/>
+<title>Store — Wretched City RP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 
@@ -285,15 +274,26 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 .store-preview-action{display:inline-flex;margin-top:20px;color:#5bb8f5;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase}
 @media(max-width:850px){.store-preview-grid{grid-template-columns:1fr}.store-preview-card{min-height:auto}}
 
+
+.store-page .nav-btn{display:inline-block}
+.store-hero{min-height:510px;padding:150px 24px 86px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.store-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,15,.36),rgba(8,10,15,.94)),url('assets/wretched-city-background.png') center 48%/cover no-repeat}
+.store-hero-inner{position:relative;z-index:2;max-width:820px}.store-hero-logo{width:132px;height:132px;object-fit:contain;filter:drop-shadow(0 0 22px rgba(91,184,245,.28));margin-bottom:20px}
+.store-hero h1{font-size:clamp(3.4rem,9vw,6.8rem);letter-spacing:4px;line-height:.95}.store-hero p{max-width:640px;margin:18px auto 0;color:#738497;line-height:1.8;font-size:.96rem}
+.store-shell{max-width:1160px;margin:0 auto;padding:76px 48px 96px;position:relative;z-index:1}.store-intro{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:72px}
+.store-intro-card{background:rgba(13,16,24,.94);border:1px solid rgba(91,184,245,.14);padding:28px}.store-intro-card strong{display:block;color:#eef4fa;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}.store-intro-card p{font-size:.86rem;color:#718196;line-height:1.7}
+.store-section{margin-top:72px}.store-section:first-of-type{margin-top:0}.store-section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid rgba(91,184,245,.1)}
+.store-section-copy{max-width:560px;color:#66778a;font-size:.86rem;line-height:1.7}.store-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.store-card{min-height:430px}.store-card .pkg-features{min-height:126px}.store-card .pkg-note{min-height:62px}
+.store-kicker{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.66rem;letter-spacing:3px;text-transform:uppercase;color:#5bb8f5;display:block;margin-bottom:8px}.store-footer-note{text-align:center;margin-top:76px;padding:34px;border:1px solid rgba(91,184,245,.12);background:rgba(91,184,245,.03)}.store-footer-note p{color:#66778a;line-height:1.7;font-size:.87rem;margin-bottom:18px}
+@media(max-width:850px){.store-page .nav-btn{display:none}.store-shell{padding:58px 20px 78px}.store-intro,.store-grid{grid-template-columns:1fr}.store-hero{min-height:430px;padding-top:120px}.store-section-head{align-items:flex-start;flex-direction:column}.store-card{min-height:auto}.store-card .pkg-features,.store-card .pkg-note{min-height:0}}
 </style>
 </head>
-<body>
-
+<body class="store-page">
 <nav>
-  <a href="#" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
+  <a href="index.html" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
   <ul class="nav-links">
-    <li><a href="#join">Join</a></li>
-    <li><a href="#Organizations">Network</a></li>
+    <li><a href="index.html#join">Join</a></li>
+    <li><a href="index.html#Organizations">Network</a></li>
     <li><a href="rules.html">Rules</a></li>
     <li><a href="store/">Store</a></li>
     <li><a href="links.html">Socials</a></li>
@@ -309,171 +309,24 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="nav-btn" rel="noopener noreferrer">Discord</a>
   </div>
 </nav>
-
-<div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-scanlines"></div>
-  <div class="hero-content">
-    <img class="hero-logo" src="assets/wc-logo-metallic.png" alt="Wretched City RP" width="1254" height="1254"/>
-    <span class="hero-eyebrow">FiveM Roleplay Server</span>
-    <h1 class="hero-title">
-      Wretched
-      <span class="glow">City RP</span>
-    </h1>
-    <span class="hero-sub">Where every street has a story. Every choice has a consequence.</span>
-    <div class="hero-btns">
-      <a href="#join" class="btn-blue">Join the City</a>
-      <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="btn-ghost" rel="noopener noreferrer">Discord</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    Scroll
-  </div>
-</div>
-
-<div class="stats-bar">
-  <div class="stat"><span class="stat-num" id="stat-online">--</span><span class="stat-label">Players Online</span></div>
-  <div class="stat"><span class="stat-num" id="stat-max">64</span><span class="stat-label">Max Players</span></div>
-  <div class="stat"><span class="stat-num" id="stat-status">●</span><span class="stat-label" id="stat-status-label">Checking...</span></div>
-  <div class="stat"><span class="stat-num" id="stat-jobs">30+</span><span class="stat-label">Custom Jobs</span></div>
-</div>
-
-<div class="sw" id="join">
-  <span class="stag">Get Started</span>
-  <h2 class="stitle">How to Join</h2>
-  <span class="srule"></span>
-  <div class="steps-grid">
-    <div class="step-card">
-      <span class="step-icon">🎮</span>
-      <span class="step-title">Install FiveM</span>
-      <p class="step-text">Download FiveM from <code>fivem.net</code>. You need a legal copy of GTA V on PC to connect.</p>
-    </div>
-    <div class="step-card">
-      <span class="step-icon">💬</span>
-      <span class="step-title">Join Discord</span>
-      <p class="step-text">Join our Discord, read the rules, apply for whitelist and get your role verified before connecting.</p>
-      <a class="copy-connect" href="https://discord.gg/RBVgmQNKCt" target="_blank" rel="noopener noreferrer">Join Main Discord</a>
-    </div>
-    <div class="step-card">
-      <span class="step-icon">🌆</span>
-      <span class="step-title">Connect</span>
-      <p class="step-text">Search <code>Wretched City RP</code> in FiveM or connect via <code>cfx.re/join/krdye6</code> after approval.</p>
-      <button class="copy-connect" type="button" onclick="copyConnect(this)"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg><span>Copy Connect Link</span></button>
-    </div>
-  </div>
-</div>
-
-<div class="sw-dark" id="Organizations">
-  <div class="inner">
-    <span class="stag">Community Network</span>
-    <h2 class="stitle">Departments &amp; Organizations</h2>
-    <span class="srule"></span>
-    <div class="Organizations-grid">
-      <a class="faction-card" href="https://discord.gg/vm8G9t3YGJ" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City Business Management Discord">
-        <span class="faction-kicker">Business Operations</span>
-        <span class="faction-name">Wretched City Business Management</span>
-        <p class="faction-desc">The management hub for city businesses, ownership coordination, approvals, and business support.</p>
-        <div class="faction-meta" aria-label="Business Management server details"><span><strong>2</strong> Online</span><span><strong>3</strong> Members</span></div>
-        <span class="faction-action">Go to Server</span>
-      </a>
-      <a class="faction-card" href="https://discord.gg/fnUmGQbvXJ" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City Gang Management Discord">
-        <span class="faction-kicker">Gang Operations</span>
-        <span class="faction-name">Wretched City Gang Management</span>
-        <p class="faction-desc">The management hub for gang leadership, organization coordination, approvals, and gang support.</p>
-        <div class="faction-meta" aria-label="Gang Management server details"><span><strong>2</strong> Online</span><span><strong>4</strong> Members</span></div>
-        <span class="faction-action">Go to Server</span>
-      </a>
-      <a class="faction-card" href="https://discord.gg/GwN62DBsxu" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City LSPD Discord">
-        <span class="faction-kicker">Law Enforcement</span>
-        <span class="faction-name">Wretched City LSPD</span>
-        <p class="faction-desc">The official LSPD department hub for applications, onboarding, operations, and department coordination.</p>
-        <div class="faction-meta" aria-label="LSPD server details"><span><strong>LSPD</strong> Department</span><span><strong>Public</strong> Intake</span></div>
-        <span class="faction-action">Go to Server</span>
-      </a>
-      <a class="faction-card" href="https://discord.gg/pdE6BNhV7v" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City EMS Discord">
-        <span class="faction-kicker">Emergency Services</span>
-        <span class="faction-name">Wretched City EMS</span>
-        <p class="faction-desc">The official EMS department hub for applications, onboarding, medical operations, and department coordination.</p>
-        <div class="faction-meta" aria-label="EMS server details"><span><strong>EMS</strong> Department</span><span><strong>Public</strong> Intake</span></div>
-        <span class="faction-action">Go to Server</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="sw" id="rules">
-  <span class="stag">The Code</span>
-  <h2 class="stitle">Server Rules</h2>
-  <span class="srule"></span>
-  <div class="rules-grid">
-    <div class="rule-item"><span class="rule-n">01</span><div><span class="rule-title">Roleplay Always</span><p class="rule-desc">Stay in character at all times. This is a Serious Roleplay server — immersion is everything.</p></div></div>
-    <div class="rule-item"><span class="rule-n">02</span><div><span class="rule-title">No RDM / VDM</span><p class="rule-desc">Random and Vehicle Deathmatch are strictly forbidden. Every action needs an RP reason.</p></div></div>
-    <div class="rule-item"><span class="rule-n">03</span><div><span class="rule-title">Value Your Life</span><p class="rule-desc">Act as your character would in real danger. No reckless decisions during active RP scenarios.</p></div></div>
-    <div class="rule-item"><span class="rule-n">04</span><div><span class="rule-title">No Meta-Gaming</span><p class="rule-desc">Using out-of-character information in-game is prohibited. Keep IC and OOC completely separate.</p></div></div>
-    <div class="rule-item"><span class="rule-n">05</span><div><span class="rule-title">Respect Everyone</span><p class="rule-desc">Harassment, discrimination, or toxic behaviour results in an immediate permanent ban.</p></div></div>
-    <div class="rule-item"><span class="rule-n">06</span><div><span class="rule-title">No Cheating / Exploiting</span><p class="rule-desc">Zero tolerance for hacks, mods, or bug exploits. Report issues to staff immediately.</p></div></div>
-  </div>
-  <div style="text-align:center;margin-top:44px;">
-    <a href="rules.html" class="btn-blue" style="display:inline-block;">View Full Rules</a>
-  </div>
-</div>
-
-<div class="sw-dark" id="staff" style="display:none;">
-  <div class="inner">
-    <span class="stag">The Team</span>
-    <h2 class="stitle">Staff</h2>
-    <span class="srule"></span>
-    <div class="staff-grid">
-      <div class="staff-card"><div class="staff-avatar">👑</div><span class="staff-name">Owner</span><span class="staff-role">Server Owner</span></div>
-      <div class="staff-card"><div class="staff-avatar">⚙️</div><span class="staff-name">Dev Team</span><span class="staff-role">Development</span></div>
-      <div class="staff-card"><div class="staff-avatar">🛡️</div><span class="staff-name">Head Admin</span><span class="staff-role">Administration</span></div>
-      <div class="staff-card"><div class="staff-avatar">🎭</div><span class="staff-name">Head Mod</span><span class="staff-role">Moderation</span></div>
-    </div>
-  </div>
-</div>
-
-<div class="store-bg" id="store">
-  <div class="sw">
-    <span class="stag">Support the Server</span>
-    <h2 class="stitle">Store</h2>
-    <span class="srule"></span>
-    <p style="color:#5a6a7a;font-size:0.9rem;margin-top:-28px;margin-bottom:8px;max-width:680px;">Explore server perks, custom orders, and upcoming VIP additions.</p>
-    <div class="store-preview-grid">
-      <a class="store-preview-card" href="store/#fixed"><span class="store-preview-kicker">Available Now</span><span class="store-preview-title">Fixed Packages</span><span class="store-preview-price">From $10</span><span class="store-preview-copy">Custom plates, VIP Valet, and other fixed perks available through the official store.</span><span class="store-preview-action">Browse Packages →</span></a>
-      <a class="store-preview-card" href="store/#custom"><span class="store-preview-kicker">Made For You</span><span class="store-preview-title">Custom Orders</span><span class="store-preview-price">$60</span><span class="store-preview-copy">Custom clothing and chains for your character, crew, gang, or business.</span><span class="store-preview-action">Request Custom Order →</span></a>
-      <a class="store-preview-card" href="store/#vip"><span class="store-preview-kicker">Coming Soon</span><span class="store-preview-title">VIP Clothing</span><span class="store-preview-price">Coming Soon</span><span class="store-preview-copy">Exclusive VIP clothing for Wretched City members. More styles and details coming soon.</span><span class="store-preview-action">View Store →</span></a>
-    </div>
-    <div style="text-align:center;margin-top:34px;"><a href="store/" class="btn-blue">View Full Store</a></div>
-  </div>
-</div>
-
-<div class="sw" style="padding-bottom:0;">
-  <div class="discord-cta">
-    <span class="discord-title">Join the Community</span>
-    <p class="discord-sub">Connect with hundreds of players, stay up to date on server news,<br/>apply for Organizations, and get support — all in our Discord.</p>
-    <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="btn-discord" rel="noopener noreferrer">
-      <svg width="20" height="15" viewBox="0 0 22 16" fill="none"><path d="M18.59 1.33A18.2 18.2 0 0 0 14.26 0c-.19.34-.4.8-.55 1.16a16.87 16.87 0 0 0-5.42 0A12.7 12.7 0 0 0 7.74 0 18.23 18.23 0 0 0 3.4 1.34C.49 5.7-.3 9.95.09 14.14a18.38 18.38 0 0 0 5.63 2.85c.45-.62.86-1.28 1.2-1.97a11.96 11.96 0 0 1-1.9-.91c.16-.11.31-.23.46-.35a13.1 13.1 0 0 0 11.03 0c.15.12.3.24.46.35-.6.36-1.24.66-1.9.92.35.69.75 1.35 1.2 1.97a18.32 18.32 0 0 0 5.64-2.86c.46-4.84-.79-9.04-3.32-12.81ZM7.34 11.59c-1.18 0-2.14-1.08-2.14-2.4s.94-2.4 2.14-2.4c1.2 0 2.16 1.08 2.14 2.4 0 1.32-.94 2.4-2.14 2.4Zm7.32 0c-1.18 0-2.14-1.08-2.14-2.4s.94-2.4 2.14-2.4c1.2 0 2.16 1.08 2.14 2.4 0 1.32-.93 2.4-2.14 2.4Z" fill="white"/></svg>
-      Join Our Discord
-    </a>
-    <div class="discord-divider"><span class="dl"></span><span>Follow Us</span><span class="dl"></span></div>
-    <div class="socials-row">
-      <a href="https://x.com/WretchedCityRP" target="_blank" class="social-link" aria-label="X (Twitter)" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@wretchedcityrp" target="_blank" class="social-link" aria-label="TikTok" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .59.04.86.13V9.4a6.33 6.33 0 0 0-1-.05A6.34 6.34 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V8.69a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.12z"/></svg>
-      </a>
-      <a href="https://www.youtube.com/@WretchedCityRP" target="_blank" class="social-link" aria-label="YouTube" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/wretchedcityrp2026/" target="_blank" class="social-link" aria-label="Instagram" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.74 0 8.333.015 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.74 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
-
+<section class="store-hero"><div class="store-hero-inner"><img class="store-hero-logo" src="assets/wc-logo-metallic.png" alt="Wretched City RP"/><span class="store-kicker">Official Store</span><h1>Wretched City Store</h1><p>Server perks, custom orders, and VIP additions — all in one place.</p></div></section>
+<main class="store-shell">
+<div class="store-intro"><div class="store-intro-card"><strong>Shop Packages</strong><p>Choose a fixed package and complete your purchase securely through Tebex.</p></div><div class="store-intro-card"><strong>Custom Orders</strong><p>Looking for custom clothing or a chain? Open a ticket and our team will help you get started.</p></div></div>
+<section class="store-section" id="fixed"><div class="store-section-head"><div><span class="store-kicker">Available Now</span><h2 class="stitle">Fixed Packages</h2></div><p class="store-section-copy">Straightforward perks with a fixed price and clearly defined benefits.</p></div>
+<div class="store-grid">
+<div class="pkg-card store-card"><div class="pkg-badge">Available Now</div><span class="pkg-name">Custom License Plate</span><span class="pkg-price"><sup>$</sup>10<span class="pkg-mo"> One-Time</span></span><ul class="pkg-features"><li>Custom plate text on your personal vehicle</li><li>Choose your own unique plate</li><li>Great for personal, crew, gang or business vehicles</li><li>A clean personal touch for your ride</li></ul><p class="pkg-note">Personal vehicles only. Plates must follow city rules and availability is not guaranteed.</p><a href="https://wretched-city.tebex.io/package/7494981" target="_blank" rel="noopener noreferrer" class="btn-pkg">Get Custom Plate</a></div>
+<div class="pkg-card store-card"><div class="pkg-badge">Available Now</div><span class="pkg-name">VIP Valet Access</span><span class="pkg-price"><sup>$</sup>14.99<span class="pkg-mo"> Monthly</span></span><ul class="pkg-features"><li>Access garages from anywhere in the city</li><li>Spawn stored personal vehicles remotely</li><li>Retrieve your car without returning to a garage</li><li>Cooldown system included for balance</li></ul><p class="pkg-note">Remote garage access for stored personal vehicles, subject to server rules and cooldowns.</p><a href="https://wretched-city.tebex.io/package/7487746" target="_blank" rel="noopener noreferrer" class="btn-pkg">Get Valet Access</a></div>
+</div></section>
+<section class="store-section" id="custom"><div class="store-section-head"><div><span class="store-kicker">Made For You</span><h2 class="stitle">Custom Orders</h2></div><p class="store-section-copy">Custom clothing and chains for your character, crew, gang, or business.</p></div>
+<div class="store-grid">
+<div class="pkg-card store-card"><div class="pkg-badge">Custom Order</div><span class="pkg-name">Custom Clothing</span><span class="pkg-price"><sup>$</sup>60<span class="pkg-mo"> One-Time</span></span><ul class="pkg-features"><li>One approved custom clothing item</li><li>Personal, business, gang or crew use</li><li>FiveM-ready item required</li><li>Cosmetic only</li></ul><p class="pkg-note">Open a Discord ticket to start your order. Our team will confirm the details and send your checkout when ready.</p><a href="https://discord.gg/RBVgmQNKCt" target="_blank" rel="noopener noreferrer" class="btn-pkg">Request Custom Order</a></div>
+<div class="pkg-card store-card"><div class="pkg-badge">Custom Order</div><span class="pkg-name">Custom Chain</span><span class="pkg-price"><sup>$</sup>60<span class="pkg-mo"> One-Time</span></span><ul class="pkg-features"><li>One approved custom chain item</li><li>Character, crew or business branding</li><li>Original or properly licensed design</li><li>Cosmetic only</li></ul><p class="pkg-note">Open a Discord ticket to start your order. Our team will confirm the details and send your checkout when ready.</p><a href="https://discord.gg/RBVgmQNKCt" target="_blank" rel="noopener noreferrer" class="btn-pkg">Request Custom Order</a></div>
+</div></section>
+<section class="store-section" id="vip"><div class="store-section-head"><div><span class="store-kicker">Coming Soon</span><h2 class="stitle">VIP Clothing</h2></div><p class="store-section-copy">Exclusive VIP clothing for Wretched City members. More styles and details coming soon.</p></div>
+<div class="store-grid"><div class="pkg-card store-card coming-soon"><div class="pkg-badge soon">Coming Soon</div><span class="pkg-name">VIP Clothing</span><span class="pkg-price" style="color:#3a4a5a;">Coming Soon</span><ul class="pkg-features"><li>Exclusive VIP clothing collection</li><li>Premium character customization</li><li>More styles coming to the city</li><li>Cosmetic only</li></ul><p class="pkg-note">More information will be announced soon.</p><span class="btn-pkg disabled">Coming Soon</span></div></div>
+</section>
+<div class="store-footer-note"><p>Need help choosing a package or starting a custom order?</p><a href="https://discord.gg/RBVgmQNKCt" target="_blank" rel="noopener noreferrer" class="btn-blue">Join Discord</a></div>
+</main>
 <footer>
   <div class="footer-logo">WretchedCity</div>
   <div class="footer-socials">
@@ -484,106 +337,4 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
   </div>
   <div class="footer-copy">© 2026 Wretched City RP · FiveM Roleplay · Not affiliated with Rockstar Games</div>
 </footer>
-
-<script>
-const CFX_ID = 'krdye6';
-const SOURCES = [
-  { url: 'https://frontend.cfx-services.net/api/servers/single/' + CFX_ID,
-    parse: d => (d && d.Data) ? { online: (d.Data.clients != null ? d.Data.clients : (d.Data.players ? d.Data.players.length : 0)), max: d.Data.sv_maxclients } : null }
-];
-const onlineEl = document.getElementById('stat-online');
-const maxEl = document.getElementById('stat-max');
-const statusEl = document.getElementById('stat-status');
-const statusLabelEl = document.getElementById('stat-status-label');
-let statFails = 0, hadData = false;
-function showOnline(online, max) {
-  hadData = true;
-  onlineEl.textContent = online != null ? online : 0;
-  if (max != null) maxEl.textContent = max;
-  statusEl.textContent = '\u25CF';
-  statusEl.style.cssText = 'color:#4ade80; font-size:1.8rem; line-height:1;';
-  statusLabelEl.textContent = 'Server Online';
-  statusLabelEl.style.cssText = 'color:#4ade80;';
-}
-function showUnknown() {
-  if (!hadData) onlineEl.textContent = '\u2014';
-  statusEl.textContent = '\u25CF';
-  statusEl.style.cssText = 'color:#5a6a7a; font-size:1.8rem; line-height:1;';
-  statusLabelEl.textContent = 'Status Unavailable';
-  statusLabelEl.style.cssText = 'color:#5a6a7a;';
-}
-async function trySource(src) {
-  const res = await fetch(src.url, { signal: AbortSignal.timeout(7000) });
-  if (!res.ok) throw new Error('http');
-  const out = src.parse(await res.json());
-  if (!out || out.max == null) throw new Error('shape');
-  return out;
-}
-async function refreshStats() {
-  try {
-    const r = await Promise.any(SOURCES.map(trySource));
-    statFails = 0; showOnline(r.online, r.max);
-  } catch (e) {
-    statFails++;
-    showUnknown();
-  }
-}
-refreshStats();
-setInterval(refreshStats, 30000);
-</script>
-
-<script>
-(function(){
-  var d=document, root=d.documentElement;
-  root.className=(root.className+' js-on').trim();
-  var sel='.stag,.stitle,.srule,.step-card,.faction-card,.rule-item,.staff-card,.pkg-card,.discord-cta';
-  var els=[].slice.call(d.querySelectorAll(sel));
-  els.forEach(function(el){ el.classList.add('reveal'); });
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          var el=e.target;
-          var sibs=[].slice.call(el.parentNode.children).filter(function(c){return c.classList.contains('reveal');});
-          var i=sibs.indexOf(el);
-          el.style.transitionDelay=(i>0?(i*0.08):0)+'s';
-          el.classList.add('reveal-in');
-          io.unobserve(el);
-        }
-      });
-    },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  } else { els.forEach(function(el){ el.classList.add('reveal-in'); }); }
-  function countUp(el){
-    if(!el) return;
-    var raw=(el.textContent||'').trim();
-    var suffix=/\+$/.test(raw)?'+':'';
-    var target=parseInt(raw,10); if(isNaN(target)) return;
-    var start=null, dur=1100;
-    function step(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1);
-      el.textContent=Math.floor(p*target)+suffix;
-      if(p<1) requestAnimationFrame(step); else el.textContent=target+suffix; }
-    requestAnimationFrame(step);
-  }
-  var bar=d.querySelector('.stats-bar'), done=false;
-  function fire(){ if(done)return; done=true; countUp(d.getElementById('stat-max')); countUp(d.getElementById('stat-jobs')); }
-  if('IntersectionObserver' in window && bar){
-    var io2=new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ fire(); io2.disconnect(); } }); },{threshold:0.5});
-    io2.observe(bar);
-  } else { fire(); }
-})();
-</script>
-
-<script>
-function copyConnect(btn){
-  var link='cfx.re/join/krdye6';
-  var label=btn.querySelector('span');
-  function done(){ var t=label.textContent; label.textContent='Copied!'; setTimeout(function(){ label.textContent='Copy Connect Link'; },1600); }
-  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(link).then(done).catch(function(){ fallback(); }); }
-  else { fallback(); }
-  function fallback(){ var ta=document.createElement('textarea'); ta.value=link; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); done(); }
-}
-</script>
-
-</body>
-</html>
+</body></html>

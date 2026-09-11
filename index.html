@@ -107,7 +107,7 @@ url('assets/wretched-city-background.png') center 48% / cover no-repeat; z-index
 .hero-eyebrow { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:7px; text-transform:uppercase; color:#5bb8f5; display:block; margin-bottom:16px; opacity:0; animation:fadeUp 0.7s 0.2s ease forwards; }
 .hero-logo { width:clamp(190px,18vw,300px); height:auto; display:block; margin:0 auto 12px; filter:drop-shadow(0 14px 28px rgba(0,0,0,0.5)) drop-shadow(0 0 24px rgba(91,184,245,0.28)); opacity:0; animation:fadeUp 0.8s 0.08s ease forwards; }
 .hero-title { font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:clamp(4.5rem,16vw,10rem); line-height:0.88; letter-spacing:5px; color:#eef4fa; display:block; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
-.hero-title .glow { display:block; color:#eef4fa; text-shadow: 0 0 30px rgba(91,184,245,0.9), 0 0 80px rgba(91,184,245,0.5), 0 0 150px rgba(91,184,245,0.25); animation: neonFlicker 7s 1.8s infinite; }
+.hero-title .glow { display:block; color:#eef4fa; text-shadow:0 0 18px rgba(91,184,245,0.55),0 0 42px rgba(91,184,245,0.24); }
 .hero-sub { font-family:'Barlow',Arial,sans-serif; font-size:0.95rem; color:#4a5a6a; letter-spacing:2px; font-weight:300; margin-top:18px; display:block; opacity:0; animation:fadeUp 0.7s 0.5s ease forwards; }
 .hero-btns { display:flex; gap:14px; justify-content:center; margin-top:38px; flex-wrap:wrap; opacity:0; animation:fadeUp 0.7s 0.65s ease forwards; }
 .btn-blue { position:relative; overflow:hidden; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.85rem; letter-spacing:3px; text-transform:uppercase; font-weight:700; color:#080a0f; background:#5bb8f5; padding:13px 36px; text-decoration:none; display:inline-block; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); transition:background 0.2s,transform 0.2s; }
@@ -143,6 +143,12 @@ url('assets/wretched-city-background.png') center 48% / cover no-repeat; z-index
 .copy-connect:hover { background:#5bb8f5; color:#080a0f; }
 .copy-connect svg { width:13px; height:13px; fill:currentColor; }
 
+
+.feature-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.feature-card { background:var(--wc-card-surface); border:1px solid var(--wc-card-border); padding:24px; }
+.feature-kicker { display:block; margin-bottom:9px; color:#5bb8f5; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:.66rem; letter-spacing:3px; text-transform:uppercase; }
+.feature-title { display:block; margin-bottom:8px; color:#eef4fa; font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:1.55rem; letter-spacing:1.8px; }
+.feature-copy { color:#718196; font-size:.86rem; line-height:1.65; }
 
 .Organizations-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
 #Organizations .inner { padding-top:72px; padding-bottom:72px; }
@@ -227,7 +233,6 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
 
 .btn-blue::after { content:''; position:absolute; top:0; left:-130%; width:55%; height:100%; background:linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent); transform:skewX(-22deg); transition:left 0.55s ease; pointer-events:none; }
 .btn-blue:hover::after { left:150%; }
-@keyframes neonFlicker { 0%,16%,20%,52%,56%,100% { text-shadow:0 0 30px rgba(91,184,245,0.9), 0 0 80px rgba(91,184,245,0.5), 0 0 150px rgba(91,184,245,0.25); } 18%,54% { text-shadow:0 0 8px rgba(91,184,245,0.4); } }
 .nav-links a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:#5bb8f5; transition:width 0.25s ease; }
 .nav-links a:hover::after { width:100%; }
 html.js-on .reveal { opacity:0; transform:translateY(26px); transition:opacity 0.6s cubic-bezier(.2,.7,.2,1), transform 0.6s cubic-bezier(.2,.7,.2,1); }
@@ -244,9 +249,18 @@ html.js-on .reveal { opacity:1; transform:none; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scaleY(1)} 50%{opacity:0.3;transform:scaleY(0.6)} }
 
 
+
+.mobile-menu-btn{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(91,184,245,.28);background:rgba(8,10,15,.86);color:#5bb8f5;font-size:1.25rem;line-height:1;cursor:pointer}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(8,10,15,.98);border-top:1px solid rgba(91,184,245,.12);border-bottom:1px solid rgba(91,184,245,.18);padding:10px 14px 14px;z-index:120}
+.mobile-menu.open{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.mobile-menu a{padding:11px 5px;text-align:center;border:1px solid rgba(91,184,245,.12);color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase}
+.mobile-menu a:hover{border-color:#5bb8f5;color:#5bb8f5}
+@media (max-width:850px){.feature-grid{grid-template-columns:1fr}}
 @media (max-width:850px) {
 nav { padding:13px 14px; }
 .nav-links { display:none; }
+.mobile-menu-btn{display:flex}
+.mobile-menu.open{display:grid}
 .nav-logo { font-size:1.05rem; letter-spacing:1.5px; gap:7px; }
 .nav-logo img { width:36px; height:36px; }
 .nav-right { gap:10px; }
@@ -300,6 +314,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     <li><a href="store/">Store</a></li>
     <li><a href="links.html">Socials</a></li>
   </ul>
+    <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
   <div class="nav-right">
     <div class="nav-socials">
       <a href="https://x.com/WretchedCityRP" target="_blank" class="nav-social" aria-label="X (Twitter)" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a>
@@ -310,6 +325,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     </div>
     <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="nav-btn" rel="noopener noreferrer">Discord</a>
   </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="index.html#join">Join</a><a href="index.html#Organizations">Network</a><a href="rules.html">Rules</a><a href="store/">Store</a><a href="links.html">Socials</a></div>
 </nav>
 
 <div class="hero">
@@ -335,10 +351,12 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 </div>
 
 <div class="stats-bar">
+  <div class="stat"><span class="stat-num" id="stat-online">—</span><span class="stat-label">Players Online</span></div>
+  <div class="stat"><span class="stat-num" id="stat-status">●</span><span class="stat-label" id="stat-status-label">Checking Status</span></div>
   <div class="stat"><span class="stat-num" id="stat-max">64</span><span class="stat-label">Max Players</span></div>
-  <div class="stat"><span class="stat-num" id="stat-civilian">19+</span><span class="stat-label">Civilian Jobs</span></div>
+  <div class="stat"><span class="stat-num" id="stat-vehicles">100+</span><span class="stat-label">Custom Vehicles</span></div>
   <div class="stat"><span class="stat-num" id="stat-crime">30+</span><span class="stat-label">Criminal Activities</span></div>
-  <div class="stat"><span class="stat-num" id="stat-business">10+</span><span class="stat-label">Business Careers</span></div>
+  <div class="stat"><span class="stat-num" id="stat-interiors">50+</span><span class="stat-label">Custom Interiors</span></div>
 </div>
 
 <div class="sw" id="join">
@@ -363,6 +381,20 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
       <span class="step-title">Connect</span>
       <p class="step-text">Search <code>Wretched City RP</code> in FiveM or connect via <code>cfx.re/join/krdye6</code> after approval.</p>
       <button class="copy-connect" type="button" onclick="copyConnect(this)"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg><span>Copy Connect Link</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="sw-dark" id="features">
+  <div class="inner">
+    <span class="stag">Built for Serious RP</span>
+    <h2 class="stitle">More Ways to Build Your Story</h2>
+    <span class="srule"></span>
+    <div class="feature-grid">
+      <div class="feature-card"><span class="feature-kicker">Character &amp; Style</span><span class="feature-title">Make It Yours</span><p class="feature-copy">Extensive custom clothing, custom chains, character styling, and personalization built for distinct identities across the city.</p></div>
+      <div class="feature-card"><span class="feature-kicker">Crime &amp; Underground</span><span class="feature-title">High-Risk RP</span><p class="feature-copy">30+ criminal activity resources supported by custom weapons, drug and underground content, and progression beyond basic street crime.</p></div>
+      <div class="feature-card"><span class="feature-kicker">Careers &amp; Business</span><span class="feature-title">Build a Life</span><p class="feature-copy">Civilian careers, player businesses, mechanic and towing systems, public-service roles, and organization-focused roleplay.</p></div>
+      <div class="feature-card"><span class="feature-kicker">World &amp; Activities</span><span class="feature-title">A City With Depth</span><p class="feature-copy">50+ custom interiors alongside casino, paintball, prison, custom radio, and other city activities that keep RP moving.</p></div>
     </div>
   </div>
 </div>
@@ -490,6 +522,16 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 
 <script>
 (function(){
+  var online=document.getElementById('stat-online'), status=document.getElementById('stat-status'), label=document.getElementById('stat-status-label'), max=document.getElementById('stat-max');
+  if(!online||!status||!label)return;
+  function show(data){var d=data&&data.Data?data.Data:data, clients=d&&(d.clients!=null?d.clients:(Array.isArray(d.players)?d.players.length:null)), slots=d&&d.sv_maxclients;if(clients==null)throw new Error('shape');online.textContent=clients;if(slots!=null&&max)max.textContent=slots;status.style.color='#4ade80';label.textContent='Server Online';label.style.color='#4ade80';}
+  function unavailable(){online.textContent='—';status.style.color='#5a6a7a';label.textContent='Status Unavailable';label.style.color='#5a6a7a';}
+  async function refresh(){var urls=['/api/server-status','https://frontend.cfx-services.net/api/servers/single/krdye6'];for(var i=0;i<urls.length;i++){try{var r=await fetch(urls[i],{cache:'no-store',signal:AbortSignal.timeout(5000)});if(!r.ok)continue;show(await r.json());return;}catch(e){}}unavailable();}
+  refresh();setInterval(refresh,30000);
+})();
+</script>
+<script>
+(function(){
   var d=document, root=d.documentElement;
   root.className=(root.className+' js-on').trim();
   var sel='.stag,.stitle,.srule,.step-card,.faction-card,.rule-item,.staff-card,.pkg-card,.discord-cta';
@@ -522,7 +564,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     requestAnimationFrame(step);
   }
   var bar=d.querySelector('.stats-bar'), done=false;
-  function fire(){ if(done)return; done=true; ['stat-max','stat-civilian','stat-crime','stat-business'].forEach(function(id){ countUp(d.getElementById(id)); }); }
+  function fire(){ if(done)return; done=true; ['stat-max','stat-vehicles','stat-crime','stat-interiors'].forEach(function(id){ countUp(d.getElementById(id)); }); }
   if('IntersectionObserver' in window && bar){
     var io2=new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ fire(); io2.disconnect(); } }); },{threshold:0.5});
     io2.observe(bar);
@@ -541,5 +583,10 @@ function copyConnect(btn){
 }
 </script>
 
+
+<script>
+function toggleMobileMenu(btn){var m=document.getElementById('mobile-menu');if(!m)return;var open=m.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?'×':'☰';}
+document.addEventListener('click',function(e){var m=document.getElementById('mobile-menu'),b=document.querySelector('.mobile-menu-btn');if(!m||!b||!m.classList.contains('open'))return;if(!m.contains(e.target)&&e.target!==b){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}});
+</script>
 </body>
 </html>

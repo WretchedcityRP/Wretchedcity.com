@@ -231,9 +231,17 @@ html.js-on .reveal { opacity:1; transform:none; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scaleY(1)} 50%{opacity:0.3;transform:scaleY(0.6)} }
 
 
+
+.mobile-menu-btn{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(91,184,245,.28);background:rgba(8,10,15,.86);color:#5bb8f5;font-size:1.25rem;line-height:1;cursor:pointer}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(8,10,15,.98);border-top:1px solid rgba(91,184,245,.12);border-bottom:1px solid rgba(91,184,245,.18);padding:10px 14px 14px;z-index:120}
+.mobile-menu.open{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.mobile-menu a{padding:11px 5px;text-align:center;border:1px solid rgba(91,184,245,.12);color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase}
+.mobile-menu a:hover{border-color:#5bb8f5;color:#5bb8f5}
 @media (max-width:850px) {
 nav { padding:13px 14px; }
 .nav-links { display:none; }
+.mobile-menu-btn{display:flex}
+.mobile-menu.open{display:grid}
 .nav-logo { font-size:1.05rem; letter-spacing:1.5px; gap:7px; }
 .nav-logo img { width:36px; height:36px; }
 .nav-right { gap:10px; }
@@ -298,6 +306,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     <li><a href="store/">Store</a></li>
     <li><a href="links.html">Socials</a></li>
   </ul>
+    <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
   <div class="nav-right">
     <div class="nav-socials">
       <a href="https://x.com/WretchedCityRP" target="_blank" class="nav-social" aria-label="X (Twitter)" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a>
@@ -308,6 +317,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     </div>
     <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="nav-btn" rel="noopener noreferrer">Discord</a>
   </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="../index.html#join">Join</a><a href="../index.html#Organizations">Network</a><a href="../rules.html">Rules</a><a href="./">Store</a><a href="../links.html">Socials</a></div>
 </nav>
 <section class="store-hero"><div class="store-hero-inner"><img class="store-hero-logo" src="assets/wc-logo-metallic.png" alt="Wretched City RP"/><span class="store-kicker">Official Store</span><h1>Wretched City Store</h1><p>Server perks, custom orders, and VIP additions — all in one place.</p></div></section>
 <main class="store-shell">
@@ -337,4 +347,9 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
   </div>
   <div class="footer-copy">© 2026 Wretched City RP · FiveM Roleplay · Not affiliated with Rockstar Games</div>
 </footer>
+
+<script>
+function toggleMobileMenu(btn){var m=document.getElementById('mobile-menu');if(!m)return;var open=m.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?'×':'☰';}
+document.addEventListener('click',function(e){var m=document.getElementById('mobile-menu'),b=document.querySelector('.mobile-menu-btn');if(!m||!b||!m.classList.contains('open'))return;if(!m.contains(e.target)&&e.target!==b){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}});
+</script>
 </body></html>

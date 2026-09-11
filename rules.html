@@ -26,7 +26,7 @@
 <style>
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; -webkit-text-size-adjust:none; }
-:root { color-scheme:light; forced-color-adjust:none; }
+:root { color-scheme:light; forced-color-adjust:none; --wc-card-surface:rgba(91,184,245,0.07); --wc-card-border:rgba(91,184,245,0.14); }
 html { background:#080a0f; scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
 body { background:#080a0f; background-color:#080a0f; color:#c8d4e0; font-family:'Barlow',Arial,sans-serif; overflow-x:hidden; min-height:100vh; }
 h1,h2,h3,h4,h5,h6 { color:#eef4fa; font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; }
@@ -42,7 +42,8 @@ body > nav, body > .page-header, body > .rules-layout, body > .back-top, body > 
 
 nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:18px 48px; background:linear-gradient(to bottom, rgba(8,10,15,0.97), rgba(8,10,15,0)); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); }
 .nav-logo { display:inline-flex; align-items:center; gap:10px; font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:1.35rem; letter-spacing:3px; color:#eef4fa; line-height:1; }
-.nav-logo img { width:42px; height:42px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 0 10px rgba(91,184,245,0.3)); }
+.nav-logo img { width:42px; height:42px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 0 10px rgba(91,184,245,0.3)); transform:translateY(-1px); }
+.nav-logo span { display:block; transform:translateY(1px); }
 .nav-links { display:flex; gap:32px; list-style:none; }
 .nav-links a { color:#5a6a7a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.8rem; letter-spacing:2.5px; text-transform:uppercase; transition:color 0.2s; }
 .nav-links a:hover { color:#5bb8f5; }
@@ -156,9 +157,17 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
 .footer-copy { font-size:0.75rem; color:#3a4a5a; }
 
 
+
+.mobile-menu-btn{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(91,184,245,.28);background:rgba(8,10,15,.86);color:#5bb8f5;font-size:1.25rem;line-height:1;cursor:pointer}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(8,10,15,.98);border-top:1px solid rgba(91,184,245,.12);border-bottom:1px solid rgba(91,184,245,.18);padding:10px 14px 14px;z-index:120}
+.mobile-menu.open{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.mobile-menu a{padding:11px 5px;text-align:center;border:1px solid rgba(91,184,245,.12);color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase}
+.mobile-menu a:hover{border-color:#5bb8f5;color:#5bb8f5}
 @media (max-width:850px) {
   nav { padding:13px 14px; }
   .nav-links { display:none; }
+.mobile-menu-btn{display:flex}
+.mobile-menu.open{display:grid}
   .nav-logo { font-size:1.05rem; letter-spacing:1.5px; gap:7px; }
   .nav-logo img { width:36px; height:36px; }
   .nav-right { gap:10px; }
@@ -193,6 +202,7 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
     <li><a href="store/">Store</a></li>
     <li><a href="links.html">Socials</a></li>
   </ul>
+    <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
   <div class="nav-right">
     <div class="nav-socials">
       <a href="https://x.com/WretchedCityRP" target="_blank" class="nav-social" aria-label="X (Twitter)" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a>
@@ -203,6 +213,7 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
     </div>
     <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="nav-btn" rel="noopener noreferrer">Discord</a>
   </div>
+  <div class="mobile-menu" id="mobile-menu"><a href="index.html#join">Join</a><a href="index.html#Organizations">Network</a><a href="rules.html">Rules</a><a href="store/">Store</a><a href="links.html">Socials</a></div>
 </nav>
 
 <div class="page-header">
@@ -554,5 +565,10 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 </script>
 
+
+<script>
+function toggleMobileMenu(btn){var m=document.getElementById('mobile-menu');if(!m)return;var open=m.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?'×':'☰';}
+document.addEventListener('click',function(e){var m=document.getElementById('mobile-menu'),b=document.querySelector('.mobile-menu-btn');if(!m||!b||!m.classList.contains('open'))return;if(!m.contains(e.target)&&e.target!==b){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}});
+</script>
 </body>
 </html>

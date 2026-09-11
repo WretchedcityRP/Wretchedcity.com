@@ -32,7 +32,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: none;
 }
-:root { color-scheme: light; forced-color-adjust: none; --wc-card-surface:rgba(91,184,245,0.04); --wc-card-border:rgba(91,184,245,0.14); }
+:root { color-scheme: light; forced-color-adjust: none; --wc-card-surface:rgba(91,184,245,0.07); --wc-card-border:rgba(91,184,245,0.14); }
 html { background: #080a0f; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body {
   background: #080a0f;
@@ -80,7 +80,8 @@ background: linear-gradient(to bottom, rgba(8,10,15,0.97), rgba(8,10,15,0));
 backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
 }
 .nav-logo { display:inline-flex; align-items:center; gap:10px; font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:1.35rem; letter-spacing:3px; color:#eef4fa; line-height:1; }
-.nav-logo img { width:42px; height:42px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 0 10px rgba(91,184,245,0.3)); }
+.nav-logo img { width:42px; height:42px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 0 10px rgba(91,184,245,0.3)); transform:translateY(-1px); }
+.nav-logo span { display:block; transform:translateY(1px); }
 .nav-links { display:flex; gap:32px; list-style:none; }
 .nav-links a { position:relative; color:#5a6a7a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.8rem; letter-spacing:2.5px; text-transform:uppercase; transition:color 0.2s; }
 .nav-links a:hover { color:#5bb8f5; }
@@ -143,17 +144,18 @@ url('assets/wretched-city-background.png') center 48% / cover no-repeat; z-index
 .copy-connect svg { width:13px; height:13px; fill:currentColor; }
 
 
-.Organizations-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-.faction-card { display:flex; flex-direction:column; min-height:220px; background:var(--wc-card-surface); padding:28px; border:1px solid var(--wc-card-border); position:relative; overflow:hidden; transition:transform 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease; }
+.Organizations-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+#Organizations .inner { padding-top:72px; padding-bottom:72px; }
+.faction-card { display:flex; flex-direction:column; min-height:190px; background:var(--wc-card-surface); padding:22px 24px; border:1px solid var(--wc-card-border); position:relative; overflow:hidden; transition:transform 0.25s ease,border-color 0.25s ease,box-shadow 0.25s ease; }
 .faction-card::before { content:''; position:absolute; inset:0 auto 0 0; width:3px; background:#5bb8f5; opacity:0.55; transition:opacity 0.25s ease; }
 .faction-card:hover { transform:translateY(-3px); border-color:rgba(91,184,245,0.38); box-shadow:0 18px 46px rgba(0,0,0,0.24); }
 .faction-card:hover::before { opacity:1; }
-.faction-kicker { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.68rem; letter-spacing:3px; text-transform:uppercase; color:#5bb8f5; margin-bottom:18px; display:block; }
-.faction-name { font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:clamp(1.7rem,3vw,2.2rem); letter-spacing:2px; color:#eef4fa; margin-bottom:12px; display:block; }
-.faction-desc { font-size:0.9rem; color:#738497; line-height:1.75; max-width:46ch; }
-.faction-meta { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; margin-top:22px; padding-top:18px; border-top:1px solid rgba(91,184,245,0.09); color:#66778a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:0.8px; text-transform:uppercase; }
+.faction-kicker { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.68rem; letter-spacing:3px; text-transform:uppercase; color:#5bb8f5; margin-bottom:12px; display:block; }
+.faction-name { font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:clamp(1.7rem,3vw,2.2rem); letter-spacing:2px; color:#eef4fa; margin-bottom:8px; display:block; }
+.faction-desc { font-size:0.9rem; color:#738497; line-height:1.58; max-width:46ch; }
+.faction-meta { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; margin-top:14px; padding-top:12px; border-top:1px solid rgba(91,184,245,0.09); color:#66778a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:0.8px; text-transform:uppercase; }
 .faction-meta strong { color:#eef4fa; font-weight:600; }
-.faction-action { display:inline-flex; align-items:center; gap:9px; margin-top:auto; padding-top:24px; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:2.3px; text-transform:uppercase; color:#5bb8f5; }
+.faction-action { display:inline-flex; align-items:center; gap:9px; margin-top:auto; padding-top:16px; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:2.3px; text-transform:uppercase; color:#5bb8f5; }
 .faction-action::after { content:'→'; font-size:1rem; line-height:1; transition:transform 0.2s ease; }
 .faction-card:hover .faction-action::after { transform:translateX(4px); }
 .faction-card:focus-visible { outline:2px solid #5bb8f5; outline-offset:4px; }
@@ -262,7 +264,7 @@ nav { padding:13px 14px; }
 .sw-dark .inner { padding:64px 20px; }
 .steps-grid { grid-template-columns:1fr; gap:14px; }
 .Organizations-grid { grid-template-columns:1fr; gap:14px; }
-.faction-card { min-height:210px; padding:24px 22px; }
+.faction-card { min-height:180px; padding:20px; }
 .faction-meta { gap:7px 12px; }
 .rules-grid { grid-template-columns:1fr; gap:0; }
 .staff-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
@@ -333,10 +335,10 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 </div>
 
 <div class="stats-bar">
-  <div class="stat"><span class="stat-num" id="stat-online">--</span><span class="stat-label">Players Online</span></div>
   <div class="stat"><span class="stat-num" id="stat-max">64</span><span class="stat-label">Max Players</span></div>
-  <div class="stat"><span class="stat-num" id="stat-status">●</span><span class="stat-label" id="stat-status-label">Checking...</span></div>
-  <div class="stat"><span class="stat-num" id="stat-jobs">30+</span><span class="stat-label">Custom Jobs</span></div>
+  <div class="stat"><span class="stat-num" id="stat-civilian">19+</span><span class="stat-label">Civilian Jobs</span></div>
+  <div class="stat"><span class="stat-num" id="stat-crime">30+</span><span class="stat-label">Criminal Activities</span></div>
+  <div class="stat"><span class="stat-num" id="stat-business">10+</span><span class="stat-label">Business Careers</span></div>
 </div>
 
 <div class="sw" id="join">
@@ -348,6 +350,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
       <span class="step-icon">🎮</span>
       <span class="step-title">Install FiveM</span>
       <p class="step-text">Download FiveM from <code>fivem.net</code>. You need a legal copy of GTA V on PC to connect.</p>
+      <a class="copy-connect" href="https://fivem.net/" target="_blank" rel="noopener noreferrer">Install FiveM</a>
     </div>
     <div class="step-card">
       <span class="step-icon">💬</span>
@@ -486,53 +489,6 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 </footer>
 
 <script>
-const CFX_ID = 'krdye6';
-const SOURCES = [
-  { url: 'https://frontend.cfx-services.net/api/servers/single/' + CFX_ID,
-    parse: d => (d && d.Data) ? { online: (d.Data.clients != null ? d.Data.clients : (d.Data.players ? d.Data.players.length : 0)), max: d.Data.sv_maxclients } : null }
-];
-const onlineEl = document.getElementById('stat-online');
-const maxEl = document.getElementById('stat-max');
-const statusEl = document.getElementById('stat-status');
-const statusLabelEl = document.getElementById('stat-status-label');
-let statFails = 0, hadData = false;
-function showOnline(online, max) {
-  hadData = true;
-  onlineEl.textContent = online != null ? online : 0;
-  if (max != null) maxEl.textContent = max;
-  statusEl.textContent = '\u25CF';
-  statusEl.style.cssText = 'color:#4ade80; font-size:1.8rem; line-height:1;';
-  statusLabelEl.textContent = 'Server Online';
-  statusLabelEl.style.cssText = 'color:#4ade80;';
-}
-function showUnknown() {
-  if (!hadData) onlineEl.textContent = '\u2014';
-  statusEl.textContent = '\u25CF';
-  statusEl.style.cssText = 'color:#5a6a7a; font-size:1.8rem; line-height:1;';
-  statusLabelEl.textContent = 'Status Unavailable';
-  statusLabelEl.style.cssText = 'color:#5a6a7a;';
-}
-async function trySource(src) {
-  const res = await fetch(src.url, { signal: AbortSignal.timeout(7000) });
-  if (!res.ok) throw new Error('http');
-  const out = src.parse(await res.json());
-  if (!out || out.max == null) throw new Error('shape');
-  return out;
-}
-async function refreshStats() {
-  try {
-    const r = await Promise.any(SOURCES.map(trySource));
-    statFails = 0; showOnline(r.online, r.max);
-  } catch (e) {
-    statFails++;
-    showUnknown();
-  }
-}
-refreshStats();
-setInterval(refreshStats, 30000);
-</script>
-
-<script>
 (function(){
   var d=document, root=d.documentElement;
   root.className=(root.className+' js-on').trim();
@@ -566,7 +522,7 @@ setInterval(refreshStats, 30000);
     requestAnimationFrame(step);
   }
   var bar=d.querySelector('.stats-bar'), done=false;
-  function fire(){ if(done)return; done=true; countUp(d.getElementById('stat-max')); countUp(d.getElementById('stat-jobs')); }
+  function fire(){ if(done)return; done=true; ['stat-max','stat-civilian','stat-crime','stat-business'].forEach(function(id){ countUp(d.getElementById(id)); }); }
   if('IntersectionObserver' in window && bar){
     var io2=new IntersectionObserver(function(en){ en.forEach(function(e){ if(e.isIntersecting){ fire(); io2.disconnect(); } }); },{threshold:0.5});
     io2.observe(bar);

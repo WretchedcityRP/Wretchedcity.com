@@ -134,7 +134,6 @@ url('assets/wretched-city-background.png') center 48% / cover no-repeat; z-index
 .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .step-card { background:#0d1018; background-color:#0d1018; border:1px solid rgba(91,184,245,0.08); padding:32px 26px; position:relative; transition:border-color 0.3s; }
 .step-card:hover { border-color:rgba(91,184,245,0.28); }
-.step-n { font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:3.5rem; color:rgba(91,184,245,0.08); position:absolute; top:12px; right:16px; line-height:1; }
 .step-icon { font-size:1.7rem; margin-bottom:14px; display:block; }
 .step-title { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:1rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#eef4fa; margin-bottom:8px; display:block; }
 .step-text { font-size:0.88rem; color:#5a6a7a; line-height:1.7; }
@@ -283,7 +282,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
   <a href="#" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
   <ul class="nav-links">
     <li><a href="#join">Join</a></li>
-    <li><a href="#Organizations">Organizations</a></li>
+    <li><a href="#Organizations">Network</a></li>
     <li><a href="rules.html">Rules</a></li>
     <li><a href="#store">Store</a></li>
     <li><a href="links.html">Socials</a></li>
@@ -335,19 +334,17 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
   <span class="srule"></span>
   <div class="steps-grid">
     <div class="step-card">
-      <span class="step-n">01</span>
       <span class="step-icon">🎮</span>
       <span class="step-title">Install FiveM</span>
       <p class="step-text">Download FiveM from <code>fivem.net</code>. You need a legal copy of GTA V on PC to connect.</p>
     </div>
     <div class="step-card">
-      <span class="step-n">02</span>
       <span class="step-icon">💬</span>
       <span class="step-title">Join Discord</span>
       <p class="step-text">Join our Discord, read the rules, apply for whitelist and get your role verified before connecting.</p>
+      <a class="copy-connect" href="https://discord.gg/RBVgmQNKCt" target="_blank" rel="noopener noreferrer">Join Main Discord</a>
     </div>
     <div class="step-card">
-      <span class="step-n">03</span>
       <span class="step-icon">🌆</span>
       <span class="step-title">Connect</span>
       <p class="step-text">Search <code>Wretched City RP</code> in FiveM or connect via <code>cfx.re/join/krdye6</code> after approval.</p>
@@ -358,8 +355,8 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 
 <div class="sw-dark" id="Organizations">
   <div class="inner">
-    <span class="stag">The Streets</span>
-    <h2 class="stitle">Organizations</h2>
+    <span class="stag">Community Network</span>
+    <h2 class="stitle">Departments &amp; Organizations</h2>
     <span class="srule"></span>
     <div class="Organizations-grid">
       <a class="faction-card" href="https://discord.gg/vm8G9t3YGJ" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City Business Management Discord">
@@ -376,6 +373,20 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
         <div class="faction-meta" aria-label="Gang Management server details"><span><strong>2</strong> Online</span><span><strong>4</strong> Members</span></div>
         <span class="faction-action">Go to Server</span>
       </a>
+      <a class="faction-card" href="https://discord.gg/GwN62DBsxu" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City LSPD Discord">
+        <span class="faction-kicker">Law Enforcement</span>
+        <span class="faction-name">Wretched City LSPD</span>
+        <p class="faction-desc">The official LSPD department hub for applications, onboarding, operations, and department coordination.</p>
+        <div class="faction-meta" aria-label="LSPD server details"><span><strong>LSPD</strong> Department</span><span><strong>Public</strong> Intake</span></div>
+        <span class="faction-action">Go to Server</span>
+      </a>
+      <a class="faction-card" href="https://discord.gg/pdE6BNhV7v" target="_blank" rel="noopener noreferrer" aria-label="Open Wretched City EMS Discord">
+        <span class="faction-kicker">Emergency Services</span>
+        <span class="faction-name">Wretched City EMS</span>
+        <p class="faction-desc">The official EMS department hub for applications, onboarding, medical operations, and department coordination.</p>
+        <div class="faction-meta" aria-label="EMS server details"><span><strong>EMS</strong> Department</span><span><strong>Public</strong> Intake</span></div>
+        <span class="faction-action">Go to Server</span>
+      </a>
     </div>
   </div>
 </div>
@@ -385,7 +396,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
   <h2 class="stitle">Server Rules</h2>
   <span class="srule"></span>
   <div class="rules-grid">
-    <div class="rule-item"><span class="rule-n">01</span><div><span class="rule-title">Roleplay Always</span><p class="rule-desc">Stay in character at all times. This is a serious RP server — immersion is everything.</p></div></div>
+    <div class="rule-item"><span class="rule-n">01</span><div><span class="rule-title">Roleplay Always</span><p class="rule-desc">Stay in character at all times. This is a Serious Roleplay server — immersion is everything.</p></div></div>
     <div class="rule-item"><span class="rule-n">02</span><div><span class="rule-title">No RDM / VDM</span><p class="rule-desc">Random and Vehicle Deathmatch are strictly forbidden. Every action needs an RP reason.</p></div></div>
     <div class="rule-item"><span class="rule-n">03</span><div><span class="rule-title">Value Your Life</span><p class="rule-desc">Act as your character would in real danger. No reckless decisions during active RP scenarios.</p></div></div>
     <div class="rule-item"><span class="rule-n">04</span><div><span class="rule-title">No Meta-Gaming</span><p class="rule-desc">Using out-of-character information in-game is prohibited. Keep IC and OOC completely separate.</p></div></div>

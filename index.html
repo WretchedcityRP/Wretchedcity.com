@@ -251,16 +251,15 @@ html.js-on .reveal { opacity:1; transform:none; }
 
 
 .mobile-menu-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:0;background:transparent;color:#eef4fa;font-size:1.55rem;line-height:1;cursor:pointer;padding:0;margin-left:auto}
-.mobile-menu{display:none;position:absolute;top:100%;right:14px;left:auto;width:min(250px,calc(100vw - 28px));background:rgba(8,10,15,.98);padding:8px 0;z-index:120;box-shadow:0 18px 42px rgba(0,0,0,.34)}
+.mobile-menu{display:none;position:absolute;top:100%;right:14px;left:auto;width:min(220px,calc(100vw - 28px));background:linear-gradient(180deg,rgba(8,10,15,.98),rgba(8,10,15,.94));padding:7px 0;z-index:120;box-shadow:0 18px 42px rgba(0,0,0,.34);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .mobile-menu.open{display:flex;flex-direction:column}
-.mobile-menu a{padding:12px 16px;text-align:left;border:0;border-bottom:1px solid rgba(91,184,245,.08);color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase}
-.mobile-menu a:last-child{border-bottom:0}.mobile-menu a:hover{color:#5bb8f5;background:rgba(91,184,245,.05)}
+.mobile-menu a{padding:11px 16px;text-align:left;border:0;color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase}
+.mobile-menu a:hover{color:#5bb8f5;background:rgba(91,184,245,.05)}
 @media (max-width:850px){.feature-grid{grid-template-columns:1fr}}
 @media (max-width:850px) {
 nav { padding:13px 14px; }
 .nav-links { display:none; }
 .mobile-menu-btn{display:flex}
-.mobile-menu.open{display:grid}
 .nav-logo { font-size:1.05rem; letter-spacing:1.5px; gap:7px; }
 .nav-logo img { width:36px; height:36px; }
 .nav-right { display:none; }
@@ -306,13 +305,13 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 <body>
 
 <nav>
-  <a href="#" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
+  <a href="/" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
   <ul class="nav-links">
-    <li><a href="#join">Join</a></li>
-    <li><a href="#Organizations">Network</a></li>
-    <li><a href="rules.html">Rules</a></li>
-    <li><a href="store/">Store</a></li>
-    <li><a href="links.html">Socials</a></li>
+    <li><a href="/#join">Join</a></li>
+    <li><a href="/#Organizations">Network</a></li>
+    <li><a href="/rules/">Rules</a></li>
+    <li><a href="/store/">Store</a></li>
+    <li><a href="/socials/">Socials</a></li>
   </ul>
     <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
   <div class="nav-right">
@@ -325,7 +324,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     </div>
     <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="nav-btn" rel="noopener noreferrer">Discord</a>
   </div>
-  <div class="mobile-menu" id="mobile-menu"><a href="index.html#join">Join</a><a href="index.html#Organizations">Network</a><a href="rules.html">Rules</a><a href="store/">Store</a><a href="links.html">Socials</a></div>
+  <div class="mobile-menu" id="mobile-menu"><a href="/#join">Join</a><a href="/#Organizations">Network</a><a href="/rules/">Rules</a><a href="/store/">Store</a><a href="/socials/">Socials</a></div>
 </nav>
 
 <div class="hero">
@@ -340,7 +339,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     </h1>
     <span class="hero-sub">Where every street has a story. Every choice has a consequence.</span>
     <div class="hero-btns">
-      <a href="#join" class="btn-blue">Join the City</a>
+      <a href="/#join" class="btn-blue">Join the City</a>
       <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="btn-ghost" rel="noopener noreferrer">Discord</a>
     </div>
   </div>
@@ -450,7 +449,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     <div class="rule-item"><span class="rule-n">06</span><div><span class="rule-title">No Cheating / Exploiting</span><p class="rule-desc">Zero tolerance for hacks, mods, or bug exploits. Report issues to staff immediately.</p></div></div>
   </div>
   <div style="text-align:center;margin-top:44px;">
-    <a href="rules.html" class="btn-blue" style="display:inline-block;">View Full Rules</a>
+    <a href="/rules/" class="btn-blue" style="display:inline-block;">View Full Rules</a>
   </div>
 </div>
 
@@ -475,11 +474,11 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     <span class="srule"></span>
     <p style="color:#5a6a7a;font-size:0.9rem;margin-top:-28px;margin-bottom:8px;max-width:680px;">Explore server perks, custom orders, and upcoming VIP additions.</p>
     <div class="store-preview-grid">
-      <a class="store-preview-card" href="store/#fixed"><span class="store-preview-kicker">Available Now</span><span class="store-preview-title">Fixed Packages</span><span class="store-preview-price">From $10</span><span class="store-preview-copy">Custom plates, VIP Valet, and other fixed perks available through the official store.</span><span class="store-preview-action">Browse Packages →</span></a>
-      <a class="store-preview-card" href="store/#custom"><span class="store-preview-kicker">Made For You</span><span class="store-preview-title">Custom Orders</span><span class="store-preview-price">$60</span><span class="store-preview-copy">Custom clothing and chains for your character, crew, gang, or business.</span><span class="store-preview-action">Request Custom Order →</span></a>
-      <a class="store-preview-card" href="store/#vip"><span class="store-preview-kicker">Coming Soon</span><span class="store-preview-title">VIP Clothing</span><span class="store-preview-price">Coming Soon</span><span class="store-preview-copy">Exclusive VIP clothing for Wretched City members. More styles and details coming soon.</span><span class="store-preview-action">View Store →</span></a>
+      <a class="store-preview-card" href="/store/#fixed"><span class="store-preview-kicker">Available Now</span><span class="store-preview-title">Fixed Packages</span><span class="store-preview-price">From $10</span><span class="store-preview-copy">Custom plates, VIP Valet, and other fixed perks available through the official store.</span><span class="store-preview-action">Browse Packages →</span></a>
+      <a class="store-preview-card" href="/store/#custom"><span class="store-preview-kicker">Made For You</span><span class="store-preview-title">Custom Orders</span><span class="store-preview-price">$60</span><span class="store-preview-copy">Custom clothing and chains for your character, crew, gang, or business.</span><span class="store-preview-action">Request Custom Order →</span></a>
+      <a class="store-preview-card" href="/store/#vip"><span class="store-preview-kicker">Coming Soon</span><span class="store-preview-title">VIP Clothing</span><span class="store-preview-price">Coming Soon</span><span class="store-preview-copy">Exclusive VIP clothing for Wretched City members. More styles and details coming soon.</span><span class="store-preview-action">View Store →</span></a>
     </div>
-    <div style="text-align:center;margin-top:34px;"><a href="store/" class="btn-blue">View Full Store</a></div>
+    <div style="text-align:center;margin-top:34px;"><a href="/store/" class="btn-blue">View Full Store</a></div>
   </div>
 </div>
 
@@ -524,9 +523,9 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 (function(){
   var online=document.getElementById('stat-online'), status=document.getElementById('stat-status'), label=document.getElementById('stat-status-label'), max=document.getElementById('stat-max');
   if(!online||!status||!label)return;
-  function show(data){var d=data&&data.Data?data.Data:data, clients=d&&(d.clients!=null?d.clients:(Array.isArray(d.players)?d.players.length:null)), slots=d&&d.sv_maxclients;if(clients==null)throw new Error('shape');online.textContent=clients;if(slots!=null&&max)max.textContent=slots;status.style.color='#4ade80';label.textContent='Server Online';label.style.color='#4ade80';}
+  function show(d){if(!d||d.status!=='online'||d.players==null)throw new Error('shape');online.textContent=d.players;if(d.max!=null&&max)max.textContent=d.max;status.style.color='#4ade80';label.textContent='Server Online';label.style.color='#4ade80';}
   function unavailable(){online.textContent='—';status.style.color='#5a6a7a';label.textContent='Status Unavailable';label.style.color='#5a6a7a';}
-  async function refresh(){var urls=['/api/server-status','https://frontend.cfx-services.net/api/servers/single/krdye6'];for(var i=0;i<urls.length;i++){try{var r=await fetch(urls[i],{cache:'no-store',signal:AbortSignal.timeout(5000)});if(!r.ok)continue;show(await r.json());return;}catch(e){}}unavailable();}
+  async function refresh(){try{var r=await fetch('https://wretched-city-status.tfwf734.workers.dev/',{cache:'no-store',signal:AbortSignal.timeout(7000)});if(!r.ok)throw new Error('http');show(await r.json());}catch(e){unavailable();}}
   refresh();setInterval(refresh,30000);
 })();
 </script>
@@ -585,8 +584,15 @@ function copyConnect(btn){
 
 
 <script>
-function toggleMobileMenu(btn){var m=document.getElementById('mobile-menu');if(!m)return;var open=m.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?'×':'☰';}
-document.addEventListener('click',function(e){var m=document.getElementById('mobile-menu'),b=document.querySelector('.mobile-menu-btn');if(!m||!b||!m.classList.contains('open'))return;if(!m.contains(e.target)&&e.target!==b){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}});
+(function(){
+  var menu=document.getElementById('mobile-menu'), button=document.querySelector('.mobile-menu-btn');
+  if(!menu||!button)return;
+  function setOpen(open){menu.classList.toggle('open',open);button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');button.textContent=open?'×':'☰';}
+  window.toggleMobileMenu=function(){setOpen(!menu.classList.contains('open'));};
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!button.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+})();
 </script>
 </body>
 </html>

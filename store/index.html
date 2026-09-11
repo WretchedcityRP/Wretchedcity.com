@@ -6,9 +6,10 @@
 <meta name="theme-color" content="#080a0f"/>
 <meta name="description" content="Official Wretched City RP store for server perks, custom orders, and VIP additions."/>
 <link rel="canonical" href="https://wretchedcity.com/store/"/>
-<base href="../"/>
+<base href="/"/>
 <link rel="icon" type="image/png" href="favicon.png"/>
 <meta property="og:type" content="website"/><meta property="og:site_name" content="Wretched City RP"/><meta property="og:title" content="Store — Wretched City RP"/><meta property="og:description" content="Browse Wretched City RP perks, custom orders, and VIP additions."/><meta property="og:image" content="https://wretchedcity.com/og-image.png"/><meta property="og:url" content="https://wretchedcity.com/store/"/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Store — Wretched City RP"/><meta name="twitter:description" content="Browse Wretched City RP perks, custom orders, and VIP additions."/><meta name="twitter:image" content="https://wretchedcity.com/og-image.png"/>
 <title>Store — Wretched City RP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -69,7 +70,8 @@ background: linear-gradient(to bottom, rgba(8,10,15,0.97), rgba(8,10,15,0));
 backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
 }
 .nav-logo { display:inline-flex; align-items:center; gap:10px; font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:1.35rem; letter-spacing:3px; color:#eef4fa; line-height:1; }
-.nav-logo img { width:42px; height:42px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 0 10px rgba(91,184,245,0.3)); }
+.nav-logo img { width:42px; height:42px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 0 10px rgba(91,184,245,0.3)); transform:translateY(-1px); }
+.nav-logo span { display:block; transform:translateY(1px); }
 .nav-links { display:flex; gap:32px; list-style:none; }
 .nav-links a { position:relative; color:#5a6a7a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.8rem; letter-spacing:2.5px; text-transform:uppercase; transition:color 0.2s; }
 .nav-links a:hover { color:#5bb8f5; }
@@ -95,7 +97,7 @@ url('assets/wretched-city-background.png') center 48% / cover no-repeat; z-index
 .hero-eyebrow { font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:7px; text-transform:uppercase; color:#5bb8f5; display:block; margin-bottom:16px; opacity:0; animation:fadeUp 0.7s 0.2s ease forwards; }
 .hero-logo { width:clamp(190px,18vw,300px); height:auto; display:block; margin:0 auto 12px; filter:drop-shadow(0 14px 28px rgba(0,0,0,0.5)) drop-shadow(0 0 24px rgba(91,184,245,0.28)); opacity:0; animation:fadeUp 0.8s 0.08s ease forwards; }
 .hero-title { font-family:'Bebas Neue','Arial Narrow',Arial,sans-serif; font-size:clamp(4.5rem,16vw,10rem); line-height:0.88; letter-spacing:5px; color:#eef4fa; display:block; opacity:0; animation:fadeUp 0.7s 0.35s ease forwards; }
-.hero-title .glow { display:block; color:#eef4fa; text-shadow: 0 0 30px rgba(91,184,245,0.9), 0 0 80px rgba(91,184,245,0.5), 0 0 150px rgba(91,184,245,0.25); animation: neonFlicker 7s 1.8s infinite; }
+.hero-title .glow { display:block; color:#eef4fa; text-shadow:0 0 18px rgba(91,184,245,0.55),0 0 42px rgba(91,184,245,0.24); }
 .hero-sub { font-family:'Barlow',Arial,sans-serif; font-size:0.95rem; color:#4a5a6a; letter-spacing:2px; font-weight:300; margin-top:18px; display:block; opacity:0; animation:fadeUp 0.7s 0.5s ease forwards; }
 .hero-btns { display:flex; gap:14px; justify-content:center; margin-top:38px; flex-wrap:wrap; opacity:0; animation:fadeUp 0.7s 0.65s ease forwards; }
 .btn-blue { position:relative; overflow:hidden; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.85rem; letter-spacing:3px; text-transform:uppercase; font-weight:700; color:#080a0f; background:#5bb8f5; padding:13px 36px; text-decoration:none; display:inline-block; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); transition:background 0.2s,transform 0.2s; }
@@ -214,7 +216,7 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
 
 .btn-blue::after { content:''; position:absolute; top:0; left:-130%; width:55%; height:100%; background:linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent); transform:skewX(-22deg); transition:left 0.55s ease; pointer-events:none; }
 .btn-blue:hover::after { left:150%; }
-@keyframes neonFlicker { 0%,16%,20%,52%,56%,100% { text-shadow:0 0 30px rgba(91,184,245,0.9), 0 0 80px rgba(91,184,245,0.5), 0 0 150px rgba(91,184,245,0.25); } 18%,54% { text-shadow:0 0 8px rgba(91,184,245,0.4); } }
+ }
 .nav-links a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:#5bb8f5; transition:width 0.25s ease; }
 .nav-links a:hover::after { width:100%; }
 html.js-on .reveal { opacity:0; transform:translateY(26px); transition:opacity 0.6s cubic-bezier(.2,.7,.2,1), transform 0.6s cubic-bezier(.2,.7,.2,1); }
@@ -233,15 +235,14 @@ html.js-on .reveal { opacity:1; transform:none; }
 
 
 .mobile-menu-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:0;background:transparent;color:#eef4fa;font-size:1.55rem;line-height:1;cursor:pointer;padding:0;margin-left:auto}
-.mobile-menu{display:none;position:absolute;top:100%;right:14px;left:auto;width:min(250px,calc(100vw - 28px));background:rgba(8,10,15,.98);padding:8px 0;z-index:120;box-shadow:0 18px 42px rgba(0,0,0,.34)}
+.mobile-menu{display:none;position:absolute;top:100%;right:14px;left:auto;width:min(220px,calc(100vw - 28px));background:linear-gradient(180deg,rgba(8,10,15,.98),rgba(8,10,15,.94));padding:7px 0;z-index:120;box-shadow:0 18px 42px rgba(0,0,0,.34);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .mobile-menu.open{display:flex;flex-direction:column}
-.mobile-menu a{padding:12px 16px;text-align:left;border:0;border-bottom:1px solid rgba(91,184,245,.08);color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase}
-.mobile-menu a:last-child{border-bottom:0}.mobile-menu a:hover{color:#5bb8f5;background:rgba(91,184,245,.05)}
+.mobile-menu a{padding:11px 16px;text-align:left;border:0;color:#c8d4e0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase}
+.mobile-menu a:hover{color:#5bb8f5;background:rgba(91,184,245,.05)}
 @media (max-width:850px) {
 nav { padding:13px 14px; }
 .nav-links { display:none; }
 .mobile-menu-btn{display:flex}
-.mobile-menu.open{display:grid}
 .nav-logo { font-size:1.05rem; letter-spacing:1.5px; gap:7px; }
 .nav-logo img { width:36px; height:36px; }
 .nav-right { display:none; }
@@ -298,13 +299,13 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 </head>
 <body class="store-page">
 <nav>
-  <a href="index.html" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
+  <a href="/" class="nav-logo" aria-label="Wretched City home"><img src="assets/wc-logo-metallic.png" alt="" width="42" height="42"/><span>Wretched City</span></a>
   <ul class="nav-links">
-    <li><a href="index.html#join">Join</a></li>
-    <li><a href="index.html#Organizations">Network</a></li>
-    <li><a href="rules.html">Rules</a></li>
-    <li><a href="store/">Store</a></li>
-    <li><a href="links.html">Socials</a></li>
+    <li><a href="/#join">Join</a></li>
+    <li><a href="/#Organizations">Network</a></li>
+    <li><a href="/rules/">Rules</a></li>
+    <li><a href="/store/">Store</a></li>
+    <li><a href="/socials/">Socials</a></li>
   </ul>
     <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMobileMenu(this)">☰</button>
   <div class="nav-right">
@@ -317,7 +318,7 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
     </div>
     <a href="https://discord.gg/RBVgmQNKCt" target="_blank" class="nav-btn" rel="noopener noreferrer">Discord</a>
   </div>
-  <div class="mobile-menu" id="mobile-menu"><a href="../index.html#join">Join</a><a href="../index.html#Organizations">Network</a><a href="../rules.html">Rules</a><a href="./">Store</a><a href="../links.html">Socials</a></div>
+  <div class="mobile-menu" id="mobile-menu"><a href="/#join">Join</a><a href="/#Organizations">Network</a><a href="/rules/">Rules</a><a href="/store/">Store</a><a href="/socials/">Socials</a></div>
 </nav>
 <section class="store-hero"><div class="store-hero-inner"><img class="store-hero-logo" src="assets/wc-logo-metallic.png" alt="Wretched City RP"/><span class="store-kicker">Official Store</span><h1>Wretched City Store</h1><p>Server perks, custom orders, and VIP additions — all in one place.</p></div></section>
 <main class="store-shell">
@@ -349,7 +350,14 @@ footer { flex-direction:column; gap:14px; text-align:center; padding:28px 20px; 
 </footer>
 
 <script>
-function toggleMobileMenu(btn){var m=document.getElementById('mobile-menu');if(!m)return;var open=m.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?'×':'☰';}
-document.addEventListener('click',function(e){var m=document.getElementById('mobile-menu'),b=document.querySelector('.mobile-menu-btn');if(!m||!b||!m.classList.contains('open'))return;if(!m.contains(e.target)&&e.target!==b){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰';}});
+(function(){
+  var menu=document.getElementById('mobile-menu'), button=document.querySelector('.mobile-menu-btn');
+  if(!menu||!button)return;
+  function setOpen(open){menu.classList.toggle('open',open);button.setAttribute('aria-expanded',open?'true':'false');button.setAttribute('aria-label',open?'Close navigation':'Open navigation');button.textContent=open?'×':'☰';}
+  window.toggleMobileMenu=function(){setOpen(!menu.classList.contains('open'));};
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!button.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+})();
 </script>
 </body></html>

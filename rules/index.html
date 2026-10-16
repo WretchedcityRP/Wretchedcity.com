@@ -134,7 +134,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-
 .coming-badge { display:inline-block; background:rgba(91,184,245,0.08); border:1px solid rgba(91,184,245,0.2); color:#5bb8f5; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; padding:6px 18px; margin-top:8px; }
 
 
-.heist-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:0; max-width:540px; margin:10px 0 16px; }
+.heist-grid { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,0.85fr); gap:0; max-width:640px; margin:10px 0 16px; }
 .heist-grid > div { font-size:0.86rem; padding:8px 14px; border-bottom:1px solid rgba(91,184,245,0.06); }
 .heist-grid .hh { font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:#3a4a5a; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; border-bottom:1px solid rgba(91,184,245,0.1); }
 .heist-grid .hj { color:#eef4fa; font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif; font-weight:700; letter-spacing:0.5px; }
@@ -241,7 +241,7 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
 
   <main class="rules-content">
 
-    <p class="intro-lead">Welcome to Wretched City RP — a serious roleplay community focused on immersive, story-driven experiences with room for creativity and fun. Actions have consequences. Play your role, respect others, and help create quality roleplay for everyone.</p>
+    <p class="intro-lead">Welcome to Wretched City RP — a semi-serious roleplay community focused on immersive, story-driven experiences with room for creativity and fun. Actions have consequences. Play your role, respect others, and help create quality roleplay for everyone.</p>
 
 
     <section class="rule-section" id="general">
@@ -258,9 +258,9 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
         <li>Keep disagreements civil.</li>
       </ul>
 
-      <span class="sub-title">Serious Roleplay</span>
+      <span class="sub-title">Semi-Serious Roleplay</span>
       <ul class="rule-list">
-        <li>This is a serious roleplay server. While fun and creativity are encouraged, actions should still make sense within the roleplay environment.</li>
+        <li>This is a semi-serious roleplay server. While fun and creativity are encouraged, actions should still make sense within the roleplay environment.</li>
         <li>Avoid unrealistic or troll behavior that breaks immersion.</li>
       </ul>
 
@@ -308,6 +308,9 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
 
       <span class="sub-title">New Life Rule (NLR)</span>
       <p class="rule-body">After death, your character forgets the events leading to that death and may not return for revenge or continue the same conflict.</p>
+
+      <span class="sub-title">Scene Return Cooldown</span>
+      <p class="rule-body">After being downed or killed, wait at least 15 minutes from respawning or being removed from the scene before returning to that area. You may not rejoin, interfere with, or continue the same active scene, even after the cooldown expires.</p>
     </section>
 
     <hr class="section-divider"/>
@@ -359,32 +362,29 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
     <section class="rule-section" id="lootboxing">
       <div class="section-head"><span class="section-num">Section 04</span><h2 class="section-title">Lootboxing &amp; NITRP</h2></div>
 
-      <span class="sub-title">Looting / Robbing Players</span>
-      <p class="rule-body">Robbing another player is permitted when the interaction and events leading up to the robbery have been properly roleplayed and provide a reasonable basis for the robbery.</p>
-      <p class="rule-body">Lootboxing is prohibited. You may not initiate an interaction solely to take another player's belongings without meaningful roleplay and proper escalation. Robberies must be supported by the scene and prior interactions, not focused solely on obtaining items.</p>
+      <span class="sub-title">Looting &amp; Player Robberies</span>
+      <p class="rule-body">Robberies require a legitimate roleplay reason, proper escalation, and a chance for everyone involved to respond. Do not approach random players solely to take their belongings.</p>
       <ul class="rule-list">
-        <li>Do not randomly search or loot downed players, including players from scenes you were not involved in.</li>
-        <li>Do not kill or down someone to take their inventory. Wretched City follows the Kill or Rob rule.</li>
+        <li><strong>Hands up to rob:</strong> A player can only be searched or robbed while alive, conscious, and complying with their hands raised.</li>
+        <li><strong>No body looting:</strong> Dead, unconscious, or downed players cannot be searched or robbed, even if you were involved in the scene.</li>
+        <li><strong>No killing for loot:</strong> Do not kill or down someone to take their belongings. Legitimate escalation and self-defense are still allowed, but never give permission to loot a downed player.</li>
       </ul>
 
       <span class="sub-title">Compliance During Robberies</span>
-      <p class="rule-body">Value your character's life and respond realistically. You must comply when you are outnumbered by at least two players or are clearly out-weaponed.</p>
+      <p class="rule-body">Value your character's life. You must comply if you are outnumbered by at least two players or clearly out-weaponed.</p>
       <ul class="rule-list">
-        <li><span class="tag-valid">Must comply:</span> One player confronted by three armed players (outnumbered by two).</li>
-        <li><span class="tag-valid">Must comply:</span> A player with a pistol confronted by a player with a clearly more powerful weapon, such as a rifle.</li>
-        <li><span class="tag-invalid">Not automatic:</span> Two players confronted by three players (outnumbered by only one).</li>
-        <li><span class="tag-invalid">Not automatic:</span> Players with comparable weapons confronting one another.</li>
+        <li><span class="tag-valid">Must comply:</span> One player facing three armed players; or a pistol facing a clearly stronger weapon such as a rifle.</li>
+        <li><span class="tag-invalid">Not automatic:</span> Two players facing three, or players with comparable weapons. Continue to assess the actual threat realistically.</li>
       </ul>
-      <p class="rule-body">Do not ignore an obvious disadvantage just to force a shootout or avoid a robbery. Continue the roleplay without arguing or mini-modding the scene. If a rule is broken, save a clip and report it to staff afterward.</p>
+      <p class="rule-body">Do not force a shootout just to avoid realistic roleplay. Stay in character; if a rule is broken, save a clip and report it to staff afterward rather than arguing during the scene.</p>
 
       <span class="sub-title">No Intent to Roleplay (NITRP)</span>
       <ul class="rule-list">
-        <li>All player interactions must be roleplayed appropriately.</li>
-        <li>Do not exploit game mechanics to gain an advantage.</li>
-        <li>Players are expected to contribute to roleplay and remain engaged in scenarios involving their character.</li>
-        <li>Repeated Lootboxing or NITRP may result in disciplinary action, including removal from the server.</li>
+        <li>Participate in roleplay rather than using interactions only to gain items or win a situation.</li>
+        <li>Do not exploit game mechanics for an unfair advantage.</li>
+        <li>Repeated lootboxing or NITRP may lead to disciplinary action.</li>
       </ul>
-      <div class="callout">Wretched City is a Kill or Rob server — you may kill a player OR rob them, but not both in the same interaction.</div>
+      <div class="callout info">Robberies require meaningful RP and hands up. Never loot a downed player.</div>
     </section>
 
     <hr class="section-divider"/>
@@ -421,11 +421,7 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
 
     <section class="rule-section" id="heist">
       <div class="section-head"><span class="section-num">Section 06</span><h2 class="section-title">Heist Activities</h2></div>
-      <p class="rule-body">Heist activity is tied to the restart (TSU) schedule:</p>
-      <ul class="rule-list">
-        <li>Heists may begin no sooner than <strong style="color:#eef4fa;">30 minutes after</strong> a TSU (restart).</li>
-        <li>Heists must end no later than <strong style="color:#eef4fa;">30 minutes before</strong> the next TSU (restart).</li>
-      </ul>
+      <p class="rule-body">Heists may begin 30 minutes after a tsunami (restart) and must finish at least 30 minutes before the next one.</p>
 
       <span class="sub-title">Group &amp; Hostage Limits</span>
       <div class="heist-grid">
@@ -436,7 +432,23 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
         <div class="hj">Jewelry</div><div class="hn">2 per location</div><div class="hn">1</div>
         <div class="hj">Art Gallery</div><div class="hn">1–2</div><div class="hn">1</div>
         <div class="hj">Pawn Shop</div><div class="hn">2–3</div><div class="hn">1–2</div>
+        <div class="hj">ATM Robbery</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">House Robbery</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Bank Robberies (Other)</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Yacht Heist</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Union Depository</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Oil Rig</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Container Jobs</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Thermite Mission</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Transport Jobs</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Bobcat Heist</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">IAA Heist</div><div class="hn">—</div><div class="hn">—</div>
+        <div class="hj">Data Drive</div><div class="hn">—</div><div class="hn">—</div>
       </div>
+      <p class="rule-body muted">— = No published limit yet. This does not mean unlimited players or hostages. Job availability and requirements may vary.</p>
+
+      <span class="sub-title">Other Illegal Activities</span>
+      <p class="rule-body">Vehicle boosting, street racing, arms runs, narcotics runs, drug operations, moonshine, oxy runs, catalytic converter theft, scrap theft, Pops Pills theft, vehicle break-ins, pickpocketing, money laundering, black market trading, and vehicle scrapping.</p>
     </section>
 
     <hr class="section-divider"/>
@@ -452,8 +464,8 @@ footer { border-top:1px solid rgba(91,184,245,0.07); padding:36px 48px; display:
         <li>Value your life and act realistically.</li>
       </ul>
 
-      <span class="sub-title">Kill or Rob Rule</span>
-      <p class="rule-body">You may kill a victim or rob a victim. You may not do both.</p>
+      <span class="sub-title">Robbery &amp; Looting</span>
+      <p class="rule-body">Robberies require proper RP and a compliant player with their hands up. Downed or dead players may not be looted. See <a href="#lootboxing" style="color:#5bb8f5;text-decoration:underline;">Lootboxing &amp; NITRP</a>.</p>
 
       <span class="sub-title">Hostages</span>
       <ul class="rule-list">
